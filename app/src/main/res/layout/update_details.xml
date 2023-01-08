@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        tools:context=".RegisterPageActivity"
+        android:background="@color/purple_200">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:cardCornerRadius="50dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FAE3EB"
+                android:padding="30dp">
+
+                <!--UPDATE HEADING-->
+                <TextView
+                    android:id="@+id/textUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:letterSpacing="0.15"
+                    android:padding="10dp"
+                    android:text="UPDATE"
+                    android:textAlignment="center"
+                    android:textColor="@color/loginTextColor"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/imgRegisterLogo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    android:layout_marginBottom="20dp" />
+
+                <!--REGISTER LOGO-->
+                <ImageView
+                    android:id="@+id/imgRegisterLogo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/profile"
+                    app:layout_constraintBottom_toTopOf="@id/etFirstName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textUpdate"
+                    android:layout_marginBottom="30dp"/>
+
+                <!--FIRST NAME EDIT TEXT-->
+                <EditText
+                    android:id="@+id/etFirstName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:fontFamily="@font/poppins_bold"
+                    android:layout_marginEnd="4dp"
+                    android:hint="First Name"
+                    android:inputType="textPersonName"
+                    android:textColor = "@color/black"
+                    android:textColorHint="@color/grey"
+                    app:layout_constraintBottom_toTopOf="@id/etEmailAddress"
+                    app:layout_constraintEnd_toStartOf="@id/etLastName"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imgRegisterLogo"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintHorizontal_weight="0.5"
+                    android:layout_marginBottom="10dp"/>
+
+                <!--LAST NAME EDIT TEXT-->
+                <EditText
+                    android:id="@+id/etLastName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:hint="Last Name"
+                    android:inputType="textPersonName"
+                    android:textColorHint="@color/grey"
+                    android:textColor="@color/black"
+                    app:layout_constraintBottom_toTopOf="@id/etEmailAddress"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/etFirstName"
+                    app:layout_constraintTop_toTopOf="@id/etFirstName"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintHorizontal_weight="0.5"
+                    android:layout_marginBottom="10dp"/>
+
+                <!--EMAIL ADDRESS EDIT TEXT-->
+                <EditText
+                    android:id="@+id/etEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress"
+                    android:textColor = "@color/black"
+                    android:textColorHint="@color/grey"
+                    app:layout_constraintBottom_toTopOf="@id/etPhoneNumber"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etFirstName"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    android:layout_marginBottom="10dp"
+                    android:enabled="false"
+                    />
+
+                <!--PHONE NUMBER EDIT TEXT-->
+                <EditText
+                    android:id="@+id/etPhoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:textColor = "@color/black"
+                    android:textColorHint="@color/grey"
+                    app:layout_constraintBottom_toTopOf="@id/etStreetAddress"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etEmailAddress"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    android:layout_marginBottom="10dp"/>
+
+                <!--STREET ADDRESS EDIT TEXT-->
+                <EditText
+                    android:id="@+id/etStreetAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:hint="Street"
+                    android:inputType="textPostalAddress"
+                    android:textColor = "@color/black"
+                    android:textColorHint="@color/grey"
+                    app:layout_constraintEnd_toStartOf="@id/etCityAddress"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etPhoneNumber"
+                    app:layout_constraintBottom_toTopOf="@id/btnUpdateButton"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    android:layout_marginBottom="10dp"/>
+
+                <!--CITY ADDRESS EDIT TEXT-->
+                <EditText
+                    android:id="@+id/etCityAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:hint="City"
+                    android:inputType="textPostalAddress"
+                    android:textColor = "@color/black"
+                    android:textColorHint="@color/grey"
+                    app:layout_constraintEnd_toStartOf="@id/etPincodeAddress"
+                    app:layout_constraintStart_toEndOf="@id/etStreetAddress"
+                    app:layout_constraintTop_toBottomOf="@id/etPhoneNumber"
+                    app:layout_constraintBottom_toTopOf="@id/btnUpdateButton"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    android:layout_marginBottom="10dp"/>
+
+                <!--PINCODE ADDRESS EDIT TEXT-->
+                <EditText
+                    android:id="@+id/etPincodeAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:hint="Pincode"
+                    android:inputType="number"
+                    android:textColor = "@color/black"
+                    android:textColorHint="@color/grey"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/etCityAddress"
+                    app:layout_constraintTop_toBottomOf="@id/etPhoneNumber"
+                    app:layout_constraintBottom_toTopOf="@id/btnUpdateButton"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    android:layout_marginBottom="10dp"/>
+
+                <!--UPDATE BUTTON-->
+                <Button
+                    android:id="@+id/btnUpdateButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="#B3076E"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="UPDATE"
+                    android:textSize="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etStreetAddress"
+                    app:layout_constraintVertical_chainStyle="packed"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
+    

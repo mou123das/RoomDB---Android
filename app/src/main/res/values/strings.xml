@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Project</string>
+    <string name="welcome_text">Welcome to Priceline</string>
+    <string name="welcome_login_text">Welcome, %1$s</string>
+    <string name="first_Name">FIRST NAME: %1$s</string>
+    <string name="last_Name">LAST NAME: %1$s</string>
+    <string name="email_address">EMAIL ADDRESS: %1$s</string>
+    <string name="phone_number">PHONE NUMBER: %1$s</string>
+    <string name="city">CITY: %1$s</string>
+    <string name="street">STREET: %1$s</string>
+    <string name="pincode">PINCODE: %1$s</string>
+</resources>

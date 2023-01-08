@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/custom_toast_layout"
+            android:orientation="horizontal"
+            android:background="#D6CDFD"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/customToastImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/splash"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/customToastMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sample toast text"
+                android:layout_gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_bold"
+                android:textStyle="italic"
+                android:textSize="14dp"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
